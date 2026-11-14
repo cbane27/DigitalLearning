@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI-Powered Job Interview Simulation</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#f4f6fa;
+}
+
+.hero{
+    background:#0b1f3a;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+}
+
+.content{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.button{
+    display:inline-block;
+    background:#0b1f3a;
+    color:white;
+    padding:16px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>AI-Powered Job Interview Simulation</h1>
+    <p>
+        Experience a realistic interview powered by conversational AI.
+        Receive personalized feedback, scoring, and coaching insights.
+    </p>
+
+    <a class="button"
+       href="interview.html">
+       Launch Simulation
+    </a>
+</div>
+
+<div class="content">
+
+<div class="card">
+
+<h2>Project Overview</h2>
+
+<p>
+This simulation demonstrates the use of AI-driven learning experiences
+to help learners practice interview skills in a safe, realistic
+environment.
+</p>
+
+<h2>Skills Demonstrated</h2>
+
+<ul>
+<li>Instructional Design</li>
+<li>AI Learning Experiences</li>
+<li>Simulation Design</li>
+<li>Assessment Development</li>
+<li>Performance Feedback</li>
+<li>Learning Technology Integration</li>
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>
