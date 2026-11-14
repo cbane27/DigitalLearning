@@ -3,206 +3,308 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Devlin Simulation Demo</title>
+<title>Job Interview Simulation | Portfolio</title>
 
 <script src="https://devlin.ai/bridge.js"></script>
 
 <style>
-body{
+:root{
+    --navy:#0b1f3a;
+    --navy-light:#14345f;
+    --gold:#d4af37;
+    --white:#ffffff;
+    --gray:#f4f6f9;
+    --success:#15803d;
+    --danger:#dc2626;
+}
+
+*{
     margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f3f4f6;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header{
-    background:#0f172a;
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:var(--gray);
+    color:#1f2937;
+    line-height:1.6;
+}
+
+.hero{
+    background:linear-gradient(135deg,var(--navy),var(--navy-light));
     color:white;
-    padding:20px;
     text-align:center;
+    padding:80px 20px;
 }
 
-main{
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.2rem;
+    opacity:.95;
+}
+
+.container{
     max-width:1200px;
     margin:auto;
-    padding:20px;
+    padding:40px 20px;
 }
 
-.sim-wrapper{
+.card{
     background:white;
-    border-radius:12px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
     overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-iframe{
+.sim-frame{
     width:100%;
-    height:700px;
+    height:750px;
     border:none;
+}
+
+.section{
+    margin-top:30px;
+}
+
+.section h2{
+    color:var(--navy);
+    margin-bottom:12px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.skill{
+    background:#e8eef8;
+    color:var(--navy);
+    padding:10px 18px;
+    border-radius:24px;
+    font-weight:600;
 }
 
 .results{
     display:none;
-    margin-top:20px;
+    margin-top:30px;
     background:white;
-    padding:24px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .score{
-    font-size:40px;
+    font-size:58px;
     font-weight:bold;
-    color:#2563eb;
-    margin-bottom:10px;
+    color:var(--navy);
 }
 
-.pass{
-    color:#16a34a;
-    font-size:22px;
-    font-weight:bold;
+.status{
+    font-size:24px;
+    margin-top:10px;
+    margin-bottom:20px;
 }
 
-.fail{
-    color:#dc2626;
-    font-size:22px;
-    font-weight:bold;
+.passed{
+    color:var(--success);
+}
+
+.failed{
+    color:var(--danger);
 }
 
 .feedback{
     margin-top:20px;
-    padding:15px;
     background:#f8fafc;
-    border-radius:8px;
+    padding:20px;
+    border-radius:10px;
 }
 
-.actions{
-    margin-top:25px;
+.buttons{
     display:flex;
+    flex-wrap:wrap;
     gap:12px;
+    margin-top:25px;
 }
 
 button{
-    padding:12px 18px;
     border:none;
-    border-radius:8px;
+    border-radius:10px;
+    padding:14px 22px;
     cursor:pointer;
     font-size:16px;
+    font-weight:600;
 }
 
 .primary{
-    background:#2563eb;
+    background:var(--navy);
     color:white;
 }
 
 .secondary{
     background:#e5e7eb;
 }
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#64748b;
+}
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Devlin AI Simulation</h1>
-</header>
+<section class="hero">
+    <h1>Job Interview Simulation</h1>
+    <p>
+        An interactive AI-powered interview experience designed to
+        assess communication, professionalism, critical thinking,
+        and interview readiness.
+    </p>
+</section>
 
-<main>
+<div class="container">
 
-<div class="sim-wrapper">
-    <iframe
-        id="devlinSim"
-        src="https://devlin.ai/embed/a8eaefa01672826cc900187e6d7dfcc6?mode=embedded">
-    </iframe>
-</div>
-
-<div id="resultPanel" class="results">
-
-    <h2>Simulation Complete</h2>
-
-    <div id="scoreDisplay" class="score">Completed</div>
-
-    <div id="passFailDisplay"></div>
-
-    <p id="timeSpent"></p>
-
-    <div class="feedback">
-        <h3>Feedback</h3>
-        <div id="feedbackDisplay"></div>
+    <div class="card">
+        <iframe
+            id="jobInterviewSim"
+            class="sim-frame"
+            src="https://devlin.ai/embed/a8eaefa01672826cc900187e6d7dfcc6?mode=embedded">
+        </iframe>
     </div>
 
-    <div class="actions">
-        <button class="primary" onclick="exitSimulation()">
-            Exit
-        </button>
+    <div class="section">
+        <h2>Skills Assessed</h2>
 
-        <button class="secondary" onclick="location.reload()">
-            Take Again
-        </button>
+        <div class="skills">
+            <div class="skill">Communication</div>
+            <div class="skill">Interview Readiness</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Professional Presence</div>
+            <div class="skill">Behavioral Responses</div>
+            <div class="skill">Self-Confidence</div>
+        </div>
+    </div>
+
+    <div id="resultsPanel" class="results">
+
+        <h2>Simulation Results</h2>
+
+        <div id="scoreDisplay" class="score">Complete</div>
+
+        <div id="passDisplay" class="status"></div>
+
+        <div id="timeDisplay"></div>
+
+        <div class="feedback">
+            <h3>Feedback</h3>
+            <p id="feedbackDisplay"></p>
+        </div>
+
+        <div class="buttons">
+
+            <button class="primary" onclick="restartSimulation()">
+                Retake Simulation
+            </button>
+
+            <button class="secondary" onclick="goBack()">
+                Return to Portfolio
+            </button>
+
+        </div>
+
     </div>
 
 </div>
 
-</main>
+<footer>
+    Interactive Portfolio Experience Powered by Devlin AI
+</footer>
 
 <script>
 
 const simVariables = {};
 
-window.addEventListener('message', (event) => {
+window.addEventListener('message', function(event){
 
-    console.log('Incoming Message:', event.data);
+    console.log('Received Message', event.data);
 
-    if (event.data?.type === 'SIM_SET_VAR') {
+    if(event.data?.type === 'SIM_SET_VAR'){
 
-        const { name, value } = event.data;
+        simVariables[event.data.name] = event.data.value;
 
-        simVariables[name] = value;
-
-        console.log(`Variable Updated: ${name}`, value);
+        console.log(
+            'Variable:',
+            event.data.name,
+            event.data.value
+        );
     }
 
-    if (event.data?.type === 'SIM_RESULT') {
+    if(event.data?.type === 'SIM_RESULT'){
 
         const result = event.data.data;
 
-        console.log('Simulation Result:', result);
+        const panel = document.getElementById('resultsPanel');
 
-        document.getElementById('resultPanel').style.display = 'block';
+        panel.style.display = 'block';
 
-        if(result.score !== null){
-            document.getElementById('scoreDisplay').textContent =
-                `${result.score}% Score`;
-        } else {
-            document.getElementById('scoreDisplay').textContent =
-                'Completed';
-        }
+        document.getElementById('scoreDisplay').innerText =
+            result.score !== null
+                ? result.score + '%'
+                : 'Completed';
+
+        const passDisplay =
+            document.getElementById('passDisplay');
 
         if(result.passed === true){
-            document.getElementById('passFailDisplay').innerHTML =
-                '<span class="pass">PASSED</span>';
-        }
-        else if(result.passed === false){
-            document.getElementById('passFailDisplay').innerHTML =
-                '<span class="fail">NOT PASSED</span>';
+
+            passDisplay.innerHTML =
+                '<span class="passed">PASSED</span>';
+
+        } else if(result.passed === false){
+
+            passDisplay.innerHTML =
+                '<span class="failed">NOT PASSED</span>';
         }
 
-        document.getElementById('feedbackDisplay').textContent =
-            result.feedback || 'No feedback provided.';
+        document.getElementById('feedbackDisplay').innerText =
+            result.feedback || 'No feedback available.';
 
-        document.getElementById('timeSpent').textContent =
-            `Time Spent: ${Math.round(result.timeSpentSeconds)} seconds`;
+        document.getElementById('timeDisplay').innerText =
+            'Time Spent: ' +
+            Math.round(result.timeSpentSeconds) +
+            ' seconds';
+
+        panel.scrollIntoView({
+            behavior:'smooth'
+        });
     }
+
 });
 
-function exitSimulation(){
+function restartSimulation(){
+
+    location.reload();
+}
+
+function goBack(){
 
     if(window.history.length > 1){
         window.history.back();
-    }
-    else{
-        window.close();
+    } else {
+        window.location.href = '/';
     }
 }
+
 </script>
 
 </body>
