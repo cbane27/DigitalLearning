@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI-Powered Coaching Experience</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#f4f6fa;
+}
+
+.hero{
+    background:#0b1f3a;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.content{
+    max-width:1000px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.button{
+    display:inline-block;
+    background:#0b1f3a;
+    color:white;
+    padding:16px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+.button:hover{
+    background:#14345f;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+h2{
+    color:#0b1f3a;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+    <h1>AI-Powered Coaching Experience</h1>
+
+    <p>
+        Engage in a personalized coaching conversation designed to
+        support self-reflection, problem-solving, and professional growth.
+        Experience how artificial intelligence can provide real-time
+        guidance, feedback, and development support through meaningful
+        dialogue.
+    </p>
+
+    <a class="button"
+       href="https://devlin.ai/embed/coach/9af690332b6f23ee7325fe6f8721bd4c?mode=standalone"
+       target="_blank">
+
+       Launch AI Coach
+
+    </a>
+
+</div>
+
+<div class="content">
+
+    <div class="card">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            This AI-powered coaching experience demonstrates how
+            conversational AI can be leveraged to support learning,
+            development, and performance improvement through personalized
+            guidance and interactive dialogue.
+        </p>
+
+        <p>
+            Unlike traditional training experiences, coaching conversations
+            encourage learners to reflect on challenges, explore possible
+            solutions, build confidence, and develop critical-thinking
+            skills in a supportive environment. The AI coach adapts to user
+            responses and provides tailored guidance designed to foster
+            growth and continuous improvement.
+        </p>
+
+        <p>
+            This project showcases the potential for AI to serve as a
+            scalable coaching and performance support resource while
+            complementing traditional learning and development initiatives.
+        </p>
+
+        <h2>Skills Demonstrated</h2>
+
+        <ul>
+            <li>AI-Powered Learning Experiences</li>
+            <li>Performance Support Design</li>
+            <li>Coaching and Development Strategy</li>
+            <li>Conversational Learning Design</li>
+            <li>Prompt Engineering</li>
+            <li>Learner Engagement</li>
+            <li>Personalized Learning Experiences</li>
+            <li>Learning Technology Integration</li>
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>
